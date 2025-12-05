@@ -11,7 +11,6 @@
 
 ## 🔐 Identity and Security
 - **AWS Cognito** — Authentication + Token Management  
-- **Auth0** — Legacy identity services (in older architecture)  
 - **Amazon KMS** — Key management services (PHI encryption)  
 
 ---
