@@ -1,0 +1,45 @@
+{
+    "_id": {
+        "_id": {
+            "$oid": "67dd74894bcaa64eee16a6a8"
+        }
+    },
+    "version": {
+        "$numberLong": "1"
+    },
+    "organizationId": {
+        "_id": {
+            "$oid": "6528a9c0970634d57e376a7b"
+        }
+    },
+    "workspaceId": {
+        "_id": {
+            "$oid": "6528a9c0970634d57e376a7c"
+        }
+    },
+    "language": "EN",
+    "type": "TC",
+    "key": "TC_0001",
+    "description": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Introduction to Terms and Conditions</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n            margin: 0;\n            padding: 20px;\n            color: #333;\n            max-width: 800px;\n            margin: 0 auto;\n        }\n        h1 {\n            color: #2c3e50;\n            border-bottom: 1px solid #eee;\n            padding-bottom: 10px;\n        }\n        p {\n            margin-bottom: 15px;\n        }\n        .last-updated {\n            font-style: italic;\n            color: #777;\n            margin-top: 30px;\n            font-size: 0.9em;\n        }\n    </style>\n</head>\n<body>\n    <h1>Introduction to Terms and Conditions</h1>\n\n    <p>We have implemented industry-standard technical and organizational measures designed to secure your information. We take safety and security very seriously. At BioLabs International LLC, we practice continued vigilance in preparing, preventing, monitoring and responding when it comes to data protection and cyber security.</p>\n\n    <p>Please read the following terms before using the App. By using the App and its associated services (\"Services\"), you agree to be bound by the Terms of Service, Service Agreement and Informed Consent, Privacy Policy, and related notices (together, the \"Agreement\"). The App and its Services are brought to you by BioLabs International LLC, and you and BioLabs International LLC are parties to this Agreement. You understand and agree that BioLabs International LLC may designate some of the Services to be provided by its third-party service provider, Safe Health Systems, Inc. (\"SHS\").</p>\n\n    <p>If you choose to receive services through the App, you further agree to be bound by the additional terms that will be presented to you when you choose those services. Such terms and related documents are also included and incorporated into this Agreement.</p>\n\n    <p>If you do not agree and consent to this Agreement, please do not use the App and the Services. If you are accepting this Agreement on behalf of a legal entity other than yourself as an individual, including a business or a government, you represent and warrant that you have full legal authority to bind such entity to this Agreement. You and BioLabs International LLC may be referred to herein individually as a \"Party\" and collectively as the \"Parties.\"</p>\n\n    <p class=\"last-updated\">This document was last updated March 4, 2025.</p>\n</body>\n</html>\n",
+    "created": {
+        "$date": {
+            "$numberLong": "1742566537007"
+        }
+    },
+    "modified": {
+        "$date": {
+            "$numberLong": "1742566537007"
+        }
+    },
+    "creator": {
+        "_id": {
+            "$oid": "67dad9703d2e023e894ae304"
+        }
+    },
+    "modifier": {
+        "_id": {
+            "$oid": "67dad9703d2e023e894ae304"
+        }
+    },
+    "_class": "cdx.opencdx.commons.model.SafeCDXCmsDocument"
+}

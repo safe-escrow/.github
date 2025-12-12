@@ -1,0 +1,69 @@
+Feature to main path - Release cadence initially at once a month.
+Hotfix to main path - any time needed
+
+
+Branching rules
+
+Developer's Steps
+
+1. Develpers create story branch, preferably in the JIRA ticket number. Makes it easy to identfy. 
+2. All changes are pushed to a story branch. This includes stories, tasks, defects
+3. All commit messages must follow the following syntax. This includes commits resolving merge conflicts as well. 
+	SAFECDX-XXXX: <<commit message>>
+4. Developer then creates a PR against the main branch.
+5. PR title must follow the following format. This will allow the PR to push reports and messages back to the JIRA issue by using the leading JIRA number from the PR title.
+	SAFECDX-XXXX: PR title
+6. Every new PR request will kick off a PR build in Girhub actions.
+7. The PR build will kick off a build and test process. All unit, integration and functional (jmeter ? ) tests will be run on the pipeline producing a test report.
+8. The PR build pipeline will only pass if the following tasks succeed.
+	1. Tests
+	2. Code Styling and formatting
+	3. Dependency checks scanning
+	4. Code coverage over 95%
+	5. JIRA ticket should be put in Review status
+9. Any failure in the checks detailed in Step 8 will fail the build.
+10. Both success and failure should push all the test artifacts to the JIRA ticket and a comment be added to the ticket. (Should this also include dep check scanning and code coverage results)
+11. Successful PR builds will enable the Merge Request button on the PR, contingent to manual review approval of the PR
+
+CI/CD pipeline steps
+
+1. Build numbers will have the following naming convention
+		Major.Minor.builds
+		for ex 1.0.20
+2. The major, minor and build numbers will be obtained from variables in the repo. These values will be updated by the CI pipeline builds.
+3. When the PR is merged, the following steps will occur
+	1. the build number is incremented and updated in variables.
+	2. Create a Git Tag with the Major.minor.build format
+	3. Store the tag generated for further use
+4. Build the code, run the tests and update sonarqube (incremental update)
+5. Create docker images with the Tag generated in step 3.
+6. Push the images to the safecdx-operations org in control plane.
+7. Deploy the tagged images to safecdx-development org in control plane
+8. Subsequent merges into main will up the build octet and produce new images ready for development.
+
+Quality Team Notification
+
+1. Every development build and deploy will trigger a notification (email, slack) to the quality team.
+2. Builds will only be manually deployed to Quality upon request. This is to prevent inadvertent change or disruption to ongoing testing activities.
+3. Upon request, a build for a particular build tag can be kicked off to be deployed to quality.
+4. Quality team can test and create bugs if any against that build tag.
+
+Final Steps for release
+
+1. Once quality team certifies a build tag, Devops team will create a Release based on the recent tag that is certified by Quality. This will be done with a release ticket in JIRA.
+2. The Release will be created and will carry a list of JIRA stories in the release notes.
+3. Release will up the Major version, if there are incompatible changes introduced. will up the minor version, if changes are introduced with backward compatibility, and will reset the build octet 
+   for ex a build tag 1.0.20 certified by Quality, will result in a release version of either 1.1 or 2.0 based on the determination of the type of changes in the release. 
+4. The repo will be tagged with the new release number for the certified tag
+   for ex, 1.0.20 will also be tagged as 1.1 or 2.0
+5. Re-tag docker images from the certified version to the release number
+   for ex opencdx-health:1.0.20 will be tagged as opencdx-health:1.1 or opencdx-health:2.0
+   
+
+
+
+
+
+
+
+

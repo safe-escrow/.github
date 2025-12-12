@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4e9074f-4275-4bcc-bf62-9305c238e685" name="Changes" comment="add additional SafeCDx docs">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure_repository_overview.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/ Cognito_Custom_Notification_Lambda.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/6528a9c0970634d57e376a7c_TC_0001.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/6528a9c0970634d57e376a7c_TC_0002.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/6528a9c0970634d57e376a7c_TC_0003.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/AWS/SES_Auto_Reply.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/AWS/SES_Support_Forward.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/AWS/Setup New AWS Account.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Branching Rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Confluent/topics-list_lkc-9od9d0_2025-03-15T18_56_12.283Z.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Deploy Instructions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Email Templates/email-verification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Email Templates/forgot-email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/MongoDB/Mongodb - Safecdx-development-userinfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/MongoDB/Mongodb - Safecdx-production-userinfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/MongoDB/Mongodb - Safecdx-quality-userinfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/MongoDB/Mongodb - Safecdx-staging-userinfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Release and Deployment Documentation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/SafeCDx-PrivacyPolicy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/SafeCDx-Release_5.1.0_Issues.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/SafeCDx-TermsAndConditions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/SafeCDx-TermsOfService.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/Things to Terraform.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/auto-responder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232003a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232004b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232005c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232006d.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232007e.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/00682607002306_6556726e339622233232008f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232003a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232004b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232005c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232006d.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232007e.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/cvml/860002060439_6556726e339622233232008f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/docker-compose-monitoring.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/forgot-password-template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/.terraform.lock.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/src/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/lambda-support-responder/versions.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/prod_PT report_template_backup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/signup-template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SafeCDx/user_pools.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nslusher-sf&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:safe-escrow/.github.git&quot;,
+    &quot;accountId&quot;: &quot;dd527811-dafb-4354-94f3-37b449a4a01a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="36lF25YrtY1GWM2Myj31xArwwiw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dev.nx.console.last_ai_configure_notification_timestamp": "1765573100505",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/nathan/Projects/Safe/biolabs-conveyance/.github/SafeCDx",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SafeCDx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/SafeCDx" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4e9074f-4275-4bcc-bf62-9305c238e685" name="Changes" comment="" />
+      <created>1765573040089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765573040089</updated>
+      <workItem from="1765573041174" duration="4161000" />
+      <workItem from="1765580110723" duration="553000" />
+    </task>
+    <task id="LOCAL-00001" summary="move SafeCDx doc">
+      <option name="closed" value="true" />
+      <created>1765578233256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765578233256</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="move SafeCDx doc" />
+    <MESSAGE value="add additional SafeCDx docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add additional SafeCDx docs" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

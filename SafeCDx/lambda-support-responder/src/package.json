@@ -1,0 +1,6 @@
+{
+  "name": "support_lambda",
+  "dependencies": {
+    "mailparser": "^3.7.2"
+  }
+}

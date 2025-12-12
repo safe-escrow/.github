@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Your Email</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .email-container {
+      width: 90%;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      max-width: 100%;
+      height: auto;
+    }
+    .content {
+      padding: 0 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .verification-code {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: left;
+      padding: 0 20px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="email-container">
+  <div class="header">
+    <img src="https://safecdx-cms.s3.us-west-2.amazonaws.com/6528a9c0970634d57e376a7b/6528a9c0970634d57e376a7c/email.png" alt="Header Image">
+  </div>
+  <div class="content">
+    <h2>Confirm Your Email</h2>
+    <p>Hi {username},</p>
+    <p>You're account has been successfully registered! The next step is for you to confirm your email so you can access your benefits.</p>
+    <p>Your verification code is:
+      <br><strong>{####}</strong></p>
+    <p>Return to your application window to input your confirmation code.</p>
+    <p>If you did not create this account please contact us at <a href="mailto:support@namehere.com">support@namehere.com</a>.</p>
+    <p>Thanks,</p>
+    <p>The Powder Tracer Team</p>
+  </div>
+</div>
+</body>
+</html>

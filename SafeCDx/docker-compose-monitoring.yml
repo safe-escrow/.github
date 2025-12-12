@@ -1,0 +1,113 @@
+
+networks:
+  safecdx-network:
+    external: true
+services:
+  trace_storage:
+    image: openzipkin/zipkin-mysql:2
+    container_name: mysql
+    # Uncomment to expose the storage port for testing
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../data:/opt/mysql/data
+    restart: unless-stopped
+  zipkin:
+    image: openzipkin/zipkin:2
+    env_file: "../.env"
+    volumes:
+      - ../certs:/certs
+    environment:
+      - STORAGE_TYPE=mysql
+      # Point the zipkin at the storage backend
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=zipkin
+      - MYSQL_PASS=zipkin
+      # Uncomment to enable scribe
+      - SCRIBE_ENABLED=true
+      # Uncomment to enable self-tracing
+      - SELF_TRACING_ENABLED=true
+      # Uncomment to enable debug logging
+      #- JAVA_OPTS=-Dlogging.level.zipkin=DEBUG -Xms512m -Xmx1g
+      - JAVA_OPTS=-Xms512m -Xmx1g -Darmeria.ssl.key-store=/certs/opencdx-keystore.p12 -Darmeria.ssl.key-store-type=PKCS12 -Darmeria.ssl.key-store-password=opencdx -Darmeria.ssl.key-alias=zipkin  -Darmeria.ssl.enabled=true -Darmeria.ssl.trust-store=/certs/opencdx-keystore.p12 -Darmeria.ssl.trust-store-type=PKCS12 -Darmeria.ssl.trust-store-password=opencdx -Darmeria.ports[0].port=9411 -Darmeria.ports[0].protocols[0]=https
+    healthcheck:
+      test: "curl -k --fail --silent ${url_protocol}://localhost:9411/actuator/health | grep UP || exit 1"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "9411:9411"
+    restart: unless-stopped
+  zipkin_dependencies:
+    image: openzipkin/zipkin-dependencies:2
+    container_name: dependencies
+    entrypoint: crond -f
+    environment:
+      - STORAGE_TYPE=mysql
+      - MYSQL_HOST=mysql
+      # Add the baked-in username and password for the zipkin-mysql image
+      - MYSQL_USER=zipkin
+      - MYSQL_PASS=zipkin
+      # Uncomment to adjust memory used by the dependencies job
+      - JAVA_OPTS=-verbose:gc -Xms512m -Xmx512m
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    command: --config.file=/etc/prometheus/prometheus.yml --web.config.file=/etc/prometheus/web.yml --log.level=debug
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/web.yml:/etc/prometheus/web.yml
+      - ../certs:/certs
+  grafana:
+    image: grafana/grafana:9.5.2
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ORG_NAME=Main Org.
+      - GF_SERVER_PROTOCOL=https
+      - GF_SERVER_CERT_KEY=/certs/grafana-key.pem
+      - GF_SERVER_CERT_FILE=/certs/grafana-cert.pem
+    volumes:
+      - ./grafana:/etc/grafana/provisioning
+      - ../certs:/certs
+  tempo:
+    image: grafana/tempo
+    extra_hosts: ['host.docker.internal:host-gateway']
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./tempo/tempo-local.yaml:/etc/tempo.yaml:ro
+      - ../data:/tmp/tempo
+    ports:
+      - "14268"  # jaeger ingest
+      - "9412:9411" # zipkin
+  loki:
+    image: grafana/loki
+    extra_hosts: ['host.docker.internal:host-gateway']
+    command: [ "-config.file=/etc/loki/local-config.yaml" ]
+    ports:
+      - "3100:3100"                                   # loki needs to be exposed so it receives logs
+    environment:
+      - JAEGER_AGENT_HOST=tempo
+      - JAEGER_ENDPOINT=http://tempo:14268/api/traces # send traces to Tempo
+      - JAEGER_SAMPLER_TYPE=const
+      - JAEGER_SAMPLER_PARAM=1
+
+#  nats:
+#    image: opencdx/nats:${version}
+#    volumes:
+#      - ../certs:/certs
+#      - ../data/nats:/opt/nats/data
+#    ports:
+#      - "4222:4222"
+#      - "6222:6222"
+#      - "8222:8222"
+#    command: "-c /nats-server.conf"
+#    environment:
+#      NATS_STREAM_MAX_AGE: 86400s

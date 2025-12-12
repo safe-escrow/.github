@@ -1,0 +1,3 @@
+password - safecdx_audit - mongodb+srv://audituser:password@safecdx-dev-1.fkchy.mongodb.net/safecdx_audit?appName=${spring.application.name}
+password - safecdx_config - mongodb+srv://configuser:password@safecdx-dev-1.fkchy.mongodb.net/safecdx_config?appName=${spring.application.name}
+password - safecdx_patient - mongodb+srv://patientuser:password@safecdx-dev-1.fkchy.mongodb.net/safecdx_patient?appName=${spring.application.name}

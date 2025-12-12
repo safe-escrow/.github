@@ -1,0 +1,23 @@
+To deploy any of the following repos to Quality, Staging or Production follow the steps below.
+
+1. Pull up the URL for the github repo
+	https://github.com/safe-health/safecdx. (SafeCDx)
+	https://github.com/safe-health/safecdx-admin. (safecdx-admin)
+	https://github.com/safe-health/safecdx-app (safecdx-app)
+	
+2. Click on the Actions Tab
+3. Click on the 'Deploy Workflow' link on the left.
+4. Click on the 'Run workflow' on the top right of the job list.
+5. Fill in the `Environment type to deploy to` with one of the following values appropriately as per where you want to deploy
+	DEVELOPMENT
+	QUALITY
+	STAGING
+	PRODUCTION
+6. Fill in the `Environment name to deploy to` with one of the following values appropriately as per where you want to deploy
+	dev-1
+	qa-1
+	staging-1
+	prod-1
+7. Fill in the `Application version` with the github version tag that you want deployed. (for ex 1.0.23)
+8. Click 'Run Workflow'
+9. Refresh the page. You must see a 'Deploy Workflow' job appear and run on the list. They run in within a min usually. However the actual deploy in Control planes takes upto 10 mins for the new versions to be ready.

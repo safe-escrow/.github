@@ -1,0 +1,26 @@
+Things to terraform in safecdx
+------------------------------
+Kafka environment, cluster and service account creation with permissions.
+Kafka AWS KMS key creation and encrypt database at rest
+
+
+Mongo AWS KMI creation and integration with mongo encryption at rest
+
+Control plane service accounts for github actions deployment
+Add Default alert email for envs in Terraform
+
+
+
+Add tags to the SES identity in terraform
+
+
+Mongo DB add network address
+Mongo DB users creation
+Creating IAM user with the policies in AWS
+Creating S3 buckets in aws
+Create auto responder config for all envs in Terraform
+Add Custom cognito Lamba in Terraform and push email templates to S3.
+Create Groups in AWS Cognito user pool.
+Export CPLN logs to S3 for safecdx envs
+
+Support Auto Response RE: original subject

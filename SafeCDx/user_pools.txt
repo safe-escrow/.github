@@ -1,0 +1,108 @@
+   [
+    {
+	  user_pool_name = "PowderTracer"
+      workspaces = [
+  		"6528a9c0970634d57e376a7c"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Default"
+      workspaces = [
+  		"6556726e3396222332320031"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Quality"
+      workspaces = [
+  		"6556726e3396222332320032"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Quality2"
+      workspaces = [
+  		"6556726e3396222332320033"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Development"
+      workspaces = [
+  		"6556726e3396222332320034"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Development2"
+      workspaces = [
+  		"6556726e3396222332320035"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    },
+    {
+	  user_pool_name = "Admin"
+      workspaces = [
+  		"000000000000000000000001"
+  	  ]
+      mfa_configuration        = "OPTIONAL"
+      auto_verified_attributes = ["email"]
+      from_email_address       = "SafeCDx Program Administrator"
+      user_groups = [
+        { name = "SAFECDX_GROUP_SYSADMIN", description = "User group for System Administrators", precedence = 1 },
+        { name = "SAFECDX_GROUP_ORGADMIN", description = "User group for Organization Administrators", precedence = 2 },
+        { name = "SAFECDX_GROUP_SYSTEM", description = "User group for system level users", precedence = 3 },
+        { name = "SAFECDX_GROUP_USERS", description = "User group for general users", precedence = 4 }
+      ]
+    }
+  ]
+

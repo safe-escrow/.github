@@ -1,0 +1,39 @@
+Create Release Branch (Ex release_v5.0)
+
+PR Checks
+------------
+Check if the PR has a target branch of main. If so error the PR with message.
+PR Labels should match the JIRA Fix Version value.
+Obtain Label from the PR. If no label, error the PR with message (Ex Release_V5.0)
+Check if the target branch name matches with the label. It it does not, error the PR with message
+Check if the PR Release Label matches with the JIRA Fix Version value. Throw and error if does not.
+
+Merge Builds
+------------
+Code merging into the release branch through PR gets a tag with the build number added to the release (Ex 5.0.xx)
+Deployment images are pushed up with the tag created (Ex 5.0.xx)
+Code is NOT merged to main from the Release Branch until it is cleared UAT.
+Once UAT clears, the branch is merged into main
+Upon merging to main it gets a release tag that reads Final as the build number (Ex 5.0.Final)
+Any code that makes to main is then merged back to pending Release branches (manual job)
+
+Hotfix
+--------------
+Any hotfixes to be created from the current release branch that is in production.
+A Branch (ex. release_v5.1) will be created. the last octet will be upped by 1 every time a hotfix needs to be deployed.
+Any tickets created for the Hotfix will be marked with the Fix version of that release.
+Developers can create story branches and tag their PRs with the current production release.
+PRs created will follow the same rules as above in PR Checks and merged into the Hotfix Release branch (ex release_v5.1)
+Hoxfix builds will get tags that read (ex 5.1.xx)
+Hotfix releases will be deployed to Staging manually to be tested by QA and UAT folks.
+Once UAT clears, the Hotfix Release branch is deployed to production and merged into main and gets a release tag (ex. 5.1.Final)
+
+Deployments
+-----------------------
+Deployments will be done only from release branches.
+Deployments will be manual except for development env.
+
+
+
+                                
+

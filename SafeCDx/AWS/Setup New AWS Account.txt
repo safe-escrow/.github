@@ -1,0 +1,28 @@
+Setup AWS Account - Instructions
+--------------------------------
+
+1. Login to Root AWS Account
+2. Click on create AWS Account ('Add an AWS Account' button on the top)
+3. Enter the account Name (Ex. SafeCDx Development)
+4. Enter the Email address of the account's owner. (Ex aws+safecdx-development@safehealth.me Please ensure to keep the format of aws+projectname-environment@safehealth.me)
+5. Make sure the IAM role name remains as 'OrganizationAccountAccessRole'
+6. Click on 'Create AWS Account' 
+7. Once the account is created (usually within 5 mins), move the account to the corresponding organizational folder (For Ex. SafeCDx)
+8. In the root account, proceed to 'IAM Identity Center' service
+9. Ensure that you sqitch to the us-east-2 region (ohio)
+10. Navigate to Groups menu on the left.
+11. Click on the 'devops' group from the list of groups displayed.
+12. Click on the 'AWS Accounts' tab
+13. Click on 'Assign Accounts' button on the right
+14. Select the newly created account (Ex SafeCDx Development)
+15. Select 'ReadOnly' and 'AdministratorAccess' and click 'Assign'
+16. Refresh the main page for AWS Accounts login. you should see the account listed.
+
+17. Login to the newly created account as Adminstrator
+18. Follow the instructions in the README files as listed below
+		modules/terraform/safehealth/base-aws/non-production/README.md
+		
+		
+		
+Setup Control Plane Org - Instructions
+----------------------------------------------
